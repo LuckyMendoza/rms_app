@@ -1,0 +1,5 @@
+<-----------landing page link---------------------->
+-https://bisyr.quomodothemes.website/
+
+<----------Template for the login and register----->
+- https://preview.themeforest.net/item/logdy-login-and-register-html5-template/full_screen_preview/23811149
