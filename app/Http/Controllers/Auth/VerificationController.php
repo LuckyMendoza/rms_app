@@ -31,7 +31,7 @@ class VerificationController extends Controller
 
     /**
      * User's email verificaiton.
-     *
+
      * @param  \Illuminate\Http\EmailVerificationRequest $request
      * @return \Illuminate\Http\Response
      */
@@ -53,5 +53,7 @@ class VerificationController extends Controller
         return back()
         ->withSuccess('A fresh verification link has been sent to your email address.');
     }
+
+
 
 }
