@@ -1,0 +1,233 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: #f0f2f5;
+    overflow: hidden;
+}
+
+.left-section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, #0033cc 0%, #0066ff 20%, #3399ff 40%, #33ccff 60%, #66d9ff 80%, #99e6ff 100%);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    z-index: -2;
+}
+
+.left-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="0,0 100,0 100,100 0,100" fill="rgba(0,0,0,0.1)"/></svg>');
+    background-size: 20px 20px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.welcome-text {
+    color: white;
+    z-index: 1;
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.welcome-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+}
+
+.facebook { color: #3b5998; }
+.twitter { color: #1da1f2; }
+.google { color: #db4437; }
+.linkedin { color: #0077b5; }
+
+.right-section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: -15px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.forgot-password {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #0066ff;
+}
+
+.login-button {
+    background: linear-gradient(to right, #0066ff, #33ccff);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 102, 255, 0.3);
+}
+
+.login-button:hover {
+    background: linear-gradient(to right, #0052cc, #00a3cc);
+    box-shadow: 0 4px 8px rgba(0, 102, 255, 0.5);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.register-link a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #0066ff;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .left-section, .right-section {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+    
+    .left-section {
+        padding-bottom: 4rem;
+    }
+    
+    .left-section::before {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    
+    .left-section::after {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+}
