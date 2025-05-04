@@ -1,64 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
-    <meta charset="UTF-8">
+    <title>RMS - Login System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel 10 User Registration with Email Verification - AllPHPTricks.com</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <!-- External CSS libraries -->
+    <link type="text/css" rel="stylesheet" href="{{ asset('assets/login-register/css/bootstrap.min.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('assets/login-register/fonts/font-awesome/css/font-awesome.min.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('assets/login-register/fonts/flaticon/font/flaticon.css') }}">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{{ asset('assets/login-register/img/favicon.ico') }}" type="image/x-icon" >
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="{{ asset('assets/login-register/css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('assets/login-register/css/custom.css') }}">
+
 </head>
-<body>
+<body id="top" class="login-3-bodycolor">
+<div class="page_loader"></div>
 
-    <nav class="navbar navbar-expand-lg bg-light">
+<!-- Login 20 start -->
+<div class="login-20">
+    <div class="login-20-inner">
         <div class="container">
-          <a class="navbar-brand" href="{{ URL('/') }}">Custom Register with Email Verification</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('login')) ? 'active' : '' }}" href="{{ route('login') }}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="{{ route('register') }}">Register</a>
-                    </li>
-                @else    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ Auth::user()->name }}
-                        </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();"
-                            >Logout</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                @csrf
-                            </form>
-                        </li>
-                        </ul>
-                    </li>
-                @endguest
-            </ul>
-          </div>
+            @yield('content')
         </div>
-    </nav>    
-
-    <div class="container">
-        @yield('content')
-        <div class="row justify-content-center text-center mt-3">
-            <div class="col-md-12">
-                <p>Back to Tutorial: 
-                    <a href="https://www.allphptricks.com/laravel-user-registration-with-email-verification/"><strong>Tutorial Link</strong></a>
-                </p>
-                <p>
-                    For More Web Development Tutorials Visit: <a href="https://www.allphptricks.com/"><strong>AllPHPTricks.com</strong></a>
-                </p>
-            </div>
     </div>
-       
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>    
+</div>
+<!-- Login 20 end -->
+
+<!-- External JS libraries -->
+<script src="{{ asset('assets/login-register/js/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/login-register/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/login-register/js/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('assets/login-register/js/app.js') }}"></script>
+<!-- Custom JS Script -->
 </body>
 </html>

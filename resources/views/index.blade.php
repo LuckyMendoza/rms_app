@@ -93,7 +93,7 @@
 
           <div class="col-lg-6">
             <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-              <img src="home/assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
+              <img src="assets/home/assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
 
               <div class="customers-badge">
                 <div class="customer-avatars">

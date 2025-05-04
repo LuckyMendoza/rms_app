@@ -1,0 +1,419 @@
+/* Custom styles for ODDO template */
+
+/* Reset previous styles that didn't work well */
+.login-20 .info:before,
+.login-20 .info:after,
+.login-20 .info .box:before,
+.login-20 .info .box:after,
+.login-20 .info .box .content:before,
+.login-20 .info .box .content:after {
+    display: none;
+}
+
+/* Create a simple, clean shape */
+.login-20 .info .box {
+    background: #0d6efd !important;
+    border-radius: 40px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+    position: relative !important;
+    margin: 20px 0 !important;
+    padding: 30px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Hide the spans that might be causing layout issues */
+.login-20 .info .box span {
+    display: none !important;
+}
+
+/* Fix the heading position */
+.login-20 .info .box h3 {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    color: #fff !important;
+    font-size: 20px !important;
+}
+
+/* Fix content container */
+.login-20 .info .box .content {
+    position: relative;
+    z-index: 2;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+}
+
+/* Fix image display */
+.login-20 .info .box .content img.login-illustrate {
+    max-width: 80% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+}
+
+/* Fix the overall container positioning */
+.login-20 .info {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+/* Fix alignment issues with parent container */
+.login-20 .bg-img {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Style for "Register here" link - with underline */
+.login-20 .form-section p a {
+    text-decoration: underline !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Blue color on hover for "Register here" */
+.login-20 .form-section p a:hover {
+    color: #0d6efd !important;
+}
+
+/* Style for "Forgot your password?" link - with underline */
+.login-20 .form-section a.forgot-password,
+.login-20 .checkbox a {
+    text-decoration: underline !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Blue color on hover for "Forgot your password?" */
+.login-20 .form-section a.forgot-password:hover,
+.login-20 .checkbox a:hover {
+    color: #0d6efd !important;
+}
+
+/* Gradient blue background for login button with animation */
+.login-20 .btn-theme {
+    background: linear-gradient(to right, #0d6efd, #0099ff) !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+    animation: pulse 2s infinite;
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
+}
+
+/* Hover effect for login button */
+.login-20 .btn-theme:hover {
+    background: linear-gradient(to right, #0099ff, #0d6efd) !important;
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.5) !important;
+    transform: translateY(-2px);
+}
+
+/* New container for the welcome message and illustration */
+.login-20 .info .content-container {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Heading style with gradient animation and shadow */
+.login-20 .info .content-container h3,
+.login-20 .info .content-container h1 {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 20px 0;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    background-image: linear-gradient(-225deg, #0033cc 0%, #0066ff 40%, #00ccff 80%, #0099ff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: shine 4s linear infinite, fadeIn 1.5s ease-in-out;
+    white-space: nowrap;
+    width: auto;
+}
+
+/* Image container */
+.login-20 .info .content-container .image-container {
+    width: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    overflow: visible;
+    filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.15));
+}
+
+/* Image styling with animation and shadow */
+.login-20 .info .content-container .login-illustrate {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    transform: scale(1.2);
+    animation: float 6s ease-in-out infinite;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Add hover effect to the image */
+.login-20 .info .content-container .login-illustrate:hover {
+    transform: scale(1.3);
+    filter: brightness(1.05) drop-shadow(0 15px 20px rgba(0, 0, 0, 0.4));
+}
+
+/* Form animations */
+.login-20 .form-section h3 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-20 .form-section .form-group:nth-child(1) {
+    animation: slideUp 0.8s ease-in-out;
+}
+
+.login-20 .form-section .form-group:nth-child(2) {
+    animation: slideUp 1s ease-in-out;
+}
+
+.login-20 .form-section .form-group:nth-child(3) {
+    animation: slideUp 1.2s ease-in-out;
+}
+
+.login-20 .form-section .form-group:nth-child(4) {
+    animation: slideUp 1.4s ease-in-out;
+}
+
+.login-20 .form-section p {
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+/* Logo animation and shadow */
+.login-20 .form-section .logo img {
+    animation: fadeIn 0.8s ease-in-out;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Animation keyframes */
+@keyframes float {
+    0% {
+        transform: scale(1.2) translateY(0px);
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    }
+    50% {
+        transform: scale(1.25) translateY(-10px);
+        filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.4));
+    }
+    100% {
+        transform: scale(1.2) translateY(0px);
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(13, 110, 253, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+    }
+}
+
+/* Gradient animation */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Add shadow to form elements */
+.login-20 .form-box {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.login-20 .form-box:focus-within {
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Add shadow to form section */
+.login-20 .form-section {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Refine the login box shadow */
+.login-20 .login-box {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Add shadow to email and password icons */
+.login-20 .form-box i {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.login-20 .form-box:focus-within i {
+    filter: drop-shadow(0 2px 3px rgba(13, 110, 253, 0.2));
+    color: #0d6efd;
+}
+
+/* Add subtle shadow to the checkbox */
+.login-20 .form-check-input {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Add shadow effect to the right-side panel */
+.login-20 .bg-img {
+    position: relative;
+    box-shadow: inset 10px 0 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a subtle shadow to entire body to enhance depth */
+body.login-3-bodycolor {
+    background-image: linear-gradient(to right, #f8f9fa, #f0f0f0);
+    position: relative;
+}
+
+body.login-3-bodycolor::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.03);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Form section heading - with purple/red/yellow gradient */
+.login-20 .form-section h3 {
+    font-weight: 800;
+    display: inline-block;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite, fadeIn 1s ease-in-out;
+    font: bold;
+}
+
+/* Paragraph text under illustration */
+.login-20 .info .content-container .image-container h5 {
+    margin-top: 20px;
+    font-size: 16px;
+    color: hsl(24, 4%, 25%);
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 2s ease-in-out;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 48px;
+    padding: 0 5px;
+}
+
+/* Google login button styling */
+.login-20 .google-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: white;
+    color: #555;
+    border: 1px solid #ddd;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    min-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1.6s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    padding-left: 45px;
+}
+
+.login-20 .google-btn:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    background: #f8f8f8;
+}
+
+.login-20 .google-btn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 48 48"><path fill="%234285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="%2334A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="%23FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="%23EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+} 

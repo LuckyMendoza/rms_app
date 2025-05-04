@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 
 
 
@@ -24,3 +25,10 @@ Route::controller(VerificationController::class)->group(function() {
     Route::get('/email/verify/{id}/{hash}', 'verify')->name('verification.verify');
     Route::post('/email/resend', 'resend')->name('verification.resend');
 });
+
+// Forgot Password Routes
+Route::controller(ForgotPasswordController::class)->group(function () {
+    Route::get('/forgot-password', 'showLinkRequestForm')->name('password.request');
+    Route::post('/forgot-password', 'sendResetLinkEmail')->name('password.email');
+});
+

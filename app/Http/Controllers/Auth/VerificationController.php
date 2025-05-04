@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Routing\Controllers\Middleware;
+use App\Http\Controllers\Auth\LoginRegisterController;
 
 class VerificationController extends Controller
 {
