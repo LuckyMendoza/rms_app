@@ -17,7 +17,7 @@
         <div class="form-section clearfix">
             <div class="logo">
                 <a href="{{route("login")}}">
-                    <img src="assets/login-register/img/logos/rms-logo-removebg.png" alt="logo" class="rms-logo">
+                    <img src="{{ asset('assets/login-register/img/logos/rms-logo-removebg.png') }}" alt="logo" class="rms-logo">
                 </a>
             </div>
             <h3>Recover Your Password</h3>
@@ -46,7 +46,7 @@
             <div class="content-container">
                 <h1>WELCOME TO RMS</h1>
                 <div class="image-container">
-                    <img src="assets/img/logos/login-illustrate.png" alt="" class="login-illustrate">
+                    <img src="{{ asset('assets/login-register/img/logos/login-illustrate.png') }}" alt="" class="login-illustrate">
                     <h5>Please send an email to stay connected with us.</h5>
                     <button type="button" class="google-btn">Continue with Google</button>
                 </div>
