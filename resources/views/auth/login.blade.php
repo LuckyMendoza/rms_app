@@ -65,7 +65,7 @@
                 <div class="image-container">
                     <img src="{{ asset('assets/login-register/img/logos/login-illustrate.png') }}" alt="" class="login-illustrate">
                     <h5>Login with your personal info or continue with Google to stay connected with us.</h5>
-                    <button type="button" class="google-btn">Continue with Google</button>
+                    <a href="{{ route('auth.google.redirect') }}" class="google-btn">Continue with Google</a>
                 </div>
             </div>
         </div>

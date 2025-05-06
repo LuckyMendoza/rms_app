@@ -17,6 +17,9 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/home', 'home')->name('home');
     Route::post('/logout', 'logout')->name('logout');
+    Route::get('/auth/google/redirect', 'redirect')->name('auth.google.redirect');
+    Route::get('/auth/google/callback', 'callback')->name('auth.google.callback');
+    
 });
 
 // Define Custom Verification Routes
